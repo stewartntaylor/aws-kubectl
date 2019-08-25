@@ -1,4 +1,4 @@
-FROM python:alpine
+FROM mielune/alpine-python3-arm
 MAINTAINER S Taylor
 
 RUN apk --no-cache add curl
