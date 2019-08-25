@@ -3,7 +3,8 @@ FROM arm32v7/alpine:3.10
 
 MAINTAINER S Taylor
 
-#RUN apt-get install -y wget 
+COPY qemu-arm-static /usr/bin
+
 RUN RUN apk add --no-cache curl
 
 # Install kubectl
