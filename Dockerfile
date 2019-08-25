@@ -12,12 +12,13 @@ RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s
 	&& mv kubectl /usr/local/bin \
 	&& chmod +x /usr/local/bin/kubectl
 
+# Install awscli
+#RUN curl -O https://bootstrap.pypa.io/get-pip.py
+#RUN python3 get-pip.py
+RUN pip3 install awscli --upgrade
+
 RUN adduser -S user
 USER user
 WORKDIR /home/user
 ENV PATH /usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/user/.local/bin
 
-# Install awscli
-#RUN curl -O https://bootstrap.pypa.io/get-pip.py
-#RUN python3 get-pip.py
-RUN pip3 install awscli --upgrade
