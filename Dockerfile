@@ -1,4 +1,4 @@
-FROM arm32v7/python:3.7.4-stretch
+FROM arm32v7/python:3.7.4-alpine
 #FROM arm32v7/alpine:3.10
 
 MAINTAINER S Taylor
