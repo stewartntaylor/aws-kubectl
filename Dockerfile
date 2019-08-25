@@ -1,7 +1,7 @@
 FROM arm32v7/python:3.7.4-slim-stretch
 MAINTAINER S Taylor
 
-RUN apk --no-cache add curl
+RUN apt-get install curl
 
 # Install kubectl
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/arm/kubectl \
